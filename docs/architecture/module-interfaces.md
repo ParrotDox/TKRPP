@@ -12,5 +12,5 @@
 
 ## Каркас JSON-контракта
 
-- **`POST /api/parse`** — файл (multipart) → `{ "text": "..." }`; при ошибке — код ошибки (битый файл, пустой файл).
+- **`POST /api/parse`** — файл (multipart) → `{ "text": "..." }`; при ошибке — структурированный код: `ERR_BAD_FILE` (битый файл), `ERR_EMPTY_FILE` (пустой файл), `ERR_NO_TEXT` (текст не извлечён, например скан без текстового слоя).
 - **`POST /api/generate`** — `{ "text": "...", "promptSettings": { "detailLevel": "...", "writingStyle": "...", "outputFormat": "...", "userPrompt": "..." } }` → ответ ИИ в JSON со строгой схемой: `{ "topic", "summary", "conspect", "tasks", "keywords" }`; при ошибке — структурированный код (`ERR_NETWORK`, `ERR_TIMEOUT`, `ERR_VALIDATION`).
