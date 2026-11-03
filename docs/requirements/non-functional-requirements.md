@@ -1,6 +1,6 @@
 # Нефункциональные требования
 
-**Источник:** лабораторная работа № 2 (экспорт Anytype от 03.11.2026). Фундамент: [functional-requirements.md](functional-requirements.md).
+**Источник:** лабораторная работа № 2. Фундамент: [functional-requirements.md](functional-requirements.md).
 
 ## Условия эксплуатации
 

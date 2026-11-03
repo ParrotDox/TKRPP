@@ -1,6 +1,6 @@
 # Функциональные требования
 
-**Источник:** лабораторная работа № 2 (экспорт Anytype от 03.11.2026). Смежные документы: [user-stories.md](user-stories.md), [non-functional-requirements.md](non-functional-requirements.md), [moscow.md](moscow.md).
+**Источник:** лабораторная работа № 2. Смежные документы: [user-stories.md](user-stories.md), [non-functional-requirements.md](non-functional-requirements.md), [moscow.md](moscow.md).
 
 ## Функции пользователя
 
