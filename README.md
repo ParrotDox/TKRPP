@@ -13,7 +13,6 @@
 | Обоснование выбора технологий (лаб. № 3) | [docs/architecture/technologies.md](docs/architecture/technologies.md) |
 | Бэклог продукта (лаб. № 4) | [docs/planning/backlog.md](docs/planning/backlog.md) |
 | План спринта 1 — цель, задачи, story points (лаб. № 4) | [docs/planning/sprint-01.md](docs/planning/sprint-01.md) |
-| План спринта 2 (черновик) | [docs/planning/sprint-02.md](docs/planning/sprint-02.md) |
 | Тестирование: сценарии, E2E, unit-спецификации (лаб. № 5) | [docs/testing.md](docs/testing.md) |
 
 **Доска задач (GitHub Projects):** `<вставить ссылку после создания доски>` — колонки «Сделать / В работе / На проверке / Готово». Правило команды: **нет карточки — нет задачи**.
