@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Http.Features;
 using TKRPP.Documents;
 using TKRPP.Server.Endpoints;
-using TKRPP.Server.Parsing;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +9,7 @@ builder.Services.Configure<FormOptions>(options =>
     options.MultipartBodyLengthLimit = ApiEndpoints.MaxUploadBytes;
 });
 
-// TODO(T-05): заменить заглушку на DocumentParser из TKRPP.Documents после мержа парсера.
-builder.Services.AddSingleton<IDocumentParser, StubDocumentParser>();
+builder.Services.AddSingleton<IDocumentParser, DocumentParser>();
 
 var app = builder.Build();
 

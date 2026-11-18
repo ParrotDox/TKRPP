@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Text;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
@@ -110,7 +111,7 @@ public sealed class ApiEndpointsTests
     }
 
     [Fact]
-    public async Task Parse_RealStubOnEmptyFile_ReportsEmptyFile()
+    public async Task Parse_RealParserOnEmptyTxt_ReportsEmptyFile()
     {
         using var factory = CreateFactory();
         using var client = factory.CreateClient();
@@ -121,6 +122,21 @@ public sealed class ApiEndpointsTests
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         var error = await response.Content.ReadFromJsonAsync<ApiError>();
         Assert.Equal(ApiErrorCodes.EmptyFile, error?.Error);
+    }
+
+    [Fact]
+    public async Task Parse_RealParserOnValidTxt_ReturnsExtractedText()
+    {
+        using var factory = CreateFactory();
+        using var client = factory.CreateClient();
+        var fileBytes = Encoding.UTF8.GetBytes("Первая строка\r\nВторая строка");
+        using var form = CreateFileForm("конспект.txt", fileBytes);
+
+        var response = await client.PostAsync("/api/parse", form);
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        var payload = await response.Content.ReadFromJsonAsync<ParseResponse>();
+        Assert.Equal("Первая строка\nВторая строка", payload?.Text);
     }
 
     private static MultipartFormDataContent CreateFileForm(string fileName, byte[]? bytes = null)
