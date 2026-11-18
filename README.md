@@ -9,6 +9,7 @@
 | Границы MVP и сценарий демонстрации (лаб. № 2) | [docs/requirements/mvp.md](docs/requirements/mvp.md) |
 | Функциональные / нефункциональные требования (лаб. № 2) | [docs/requirements/functional-requirements.md](docs/requirements/functional-requirements.md) · [docs/requirements/non-functional-requirements.md](docs/requirements/non-functional-requirements.md) |
 | Архитектура, модули и их границы (лаб. № 3) | [docs/architecture/modules.md](docs/architecture/modules.md) |
+| Архитектурная схема системы (диаграмма) | [docs/resources/Architecture.png](docs/resources/Architecture.png) |
 | Связи и интерфейсы модулей, JSON-контракт (лаб. № 3) | [docs/architecture/module-interfaces.md](docs/architecture/module-interfaces.md) |
 | Обоснование выбора технологий (лаб. № 3) | [docs/architecture/technologies.md](docs/architecture/technologies.md) |
 | Бэклог продукта (лаб. № 4) | [docs/planning/backlog.md](docs/planning/backlog.md) |
