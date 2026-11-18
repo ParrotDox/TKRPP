@@ -1,0 +1,36 @@
+# .NET build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+artifacts/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.cache
+
+# Test results
+TestResults/
+*.trx
+coverage*.json
+coverage*.xml
+*.coverage
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.DotSettings.user
+
+# Local SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -15,3 +15,18 @@
 | Бэклог продукта (лаб. № 4) | [docs/planning/backlog.md](docs/planning/backlog.md) |
 | План спринта 1 — цель, задачи, story points (лаб. № 4) | [docs/planning/sprint-01.md](docs/planning/sprint-01.md) |
 | Тестирование: сценарии, E2E, unit-спецификации (лаб. № 5) | [docs/testing.md](docs/testing.md) |
+
+## Запуск
+
+Требуется .NET SDK 10.
+
+```powershell
+dotnet run --project src/TKRPP.Server
+```
+
+Приложение открывается на [http://localhost:5000](http://localhost:5000), проверка сервера — `/api/health`.
+
+```powershell
+dotnet test
+```
+
